@@ -48,6 +48,9 @@ public abstract class BasePage {
         return new WebDriverWait(driver, Duration.ofSeconds(time))
                 .until(ExpectedConditions.textToBePresentInElement(element,text));
     }
+    public boolean isTextPresent(WebElement element,String book) {
+        return element.getText().contains(book);
+    }
 }
 
 
