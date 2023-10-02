@@ -4,13 +4,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class HomePage extends BasePage{
+public class HomePage extends BasePage {
     public HomePage(WebDriver driver) {
         super(driver);
 
     }
-@FindBy(xpath="//a[.='JavaScript Alerts']")
+
+    @FindBy(xpath = "//a[.='JavaScript Alerts']")
     WebElement alertsLink;
+
     public AlertsPage getAlerts() {
         click(alertsLink);
         return new AlertsPage(driver);
@@ -24,6 +26,7 @@ public class HomePage extends BasePage{
         click(windowsLink);
         return new WindowPage(driver);
     }
+
     @FindBy(xpath = "//a[.='Form Authentication']")
     WebElement formLink;
 
@@ -32,11 +35,28 @@ public class HomePage extends BasePage{
         return new JSExecutor(driver);
 
     }
+
     @FindBy(xpath = "//a[.='Broken Images']")
     WebElement brokenImage;
 
     public BrokenImagePage getBrokenImages() {
-click(brokenImage);
+        click(brokenImage);
         return new BrokenImagePage(driver);
+    }
+
+    @FindBy(xpath = "//a[.='Frames']")
+    WebElement frames;
+
+    public FramesPage getFrames() {
+        click(frames);
+        return new FramesPage(driver);
+    }
+
+    @FindBy(xpath = "//a[.='Horizontal Slider']")
+    WebElement slider;
+
+    public HorizontalSliderPage getHorizontalSlider() {
+        click(slider);
+        return new HorizontalSliderPage(driver);
     }
 }

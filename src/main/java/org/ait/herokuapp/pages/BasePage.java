@@ -31,6 +31,13 @@ public abstract class BasePage {
         }
     }
 
+    public void pause(int millis){
+        try {
+            Thread.sleep(millis);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
     public void clickWithJSExecutor(WebElement element,int x, int y) {
 
         JavascriptExecutor js = (JavascriptExecutor) driver;
