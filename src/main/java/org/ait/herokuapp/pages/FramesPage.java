@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class FramesPage extends BasePage  {
+public class FramesPage extends BasePage {
     public FramesPage(WebDriver driver) {
         super(driver);
 
@@ -15,12 +15,15 @@ public class FramesPage extends BasePage  {
 
     @FindBy(xpath = "//a[.='iFrame']")
     WebElement iFrame;
+
     public FramesPage selectFrames() {
         click(iFrame);
         return this;
     }
+
     @FindBy(tagName = "iframe")
     List<WebElement> iframes;
+
     public FramesPage returnListOfrFrames() {
         //1. using iframe tag / alternative of 2 choice
         System.out.println("The total numbers of iframes: " + iframes.size());
@@ -34,13 +37,15 @@ public class FramesPage extends BasePage  {
 
     @FindBy(id = "tinymce")
     WebElement tinymce;
+
     public FramesPage switchToIframeByIndex(int index) {
         //switch to iframe by index
         driver.switchTo().frame(index);
         System.out.println("Text of the iframe: " + tinymce.getText());
         return this;
     }
-    @FindBy(id="mce_0_ifr")
+
+    @FindBy(id = "mce_0_ifr")
     WebElement mce_0_ifr;
     @FindBy(xpath = "//h3[contains(text(), 'An iFrame containing the TinyMCE WYSIWYG Editor')]")
     WebElement iFrameElement;
@@ -55,5 +60,11 @@ public class FramesPage extends BasePage  {
         return this;
     }
 
+    @FindBy(xpath = "//a[.='Nested Frames']")
+    WebElement nestedFrames;
 
+    public NestedFramesPage selectNestedFrames() {
+        click(nestedFrames);
+        return new NestedFramesPage(driver);
+    }
 }

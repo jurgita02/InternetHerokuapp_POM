@@ -36,5 +36,6 @@ public class HorizontalSliderPage extends BasePage {
     public String getValueAttribute(WebElement element, String name) {
 return element.getAttribute(name);
 
+
     }
 }

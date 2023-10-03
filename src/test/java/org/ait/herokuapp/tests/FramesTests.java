@@ -2,6 +2,7 @@ package org.ait.herokuapp.tests;
 
 import org.ait.herokuapp.pages.FramesPage;
 import org.ait.herokuapp.pages.HomePage;
+import org.ait.herokuapp.pages.NestedFramesPage;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -23,6 +24,10 @@ public class FramesTests extends TestBase {
         new FramesPage(driver).selectFrames();
         new FramesPage(driver).switchToIframeByID();
     }
-
+@Test
+public void handleNestedIframeTest(){
+    new FramesPage(driver).selectNestedFrames();
+    new NestedFramesPage(driver).handleNestedIframes();
+}
 
 }
