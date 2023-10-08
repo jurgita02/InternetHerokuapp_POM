@@ -59,4 +59,25 @@ public class HomePage extends BasePage {
         click(slider);
         return new HorizontalSliderPage(driver);
     }
+
+    @FindBy(xpath = "//a[.='Checkboxes']")
+    WebElement checkboxes;
+
+    public CheckboxesPage getCheckboxes() {
+        click(checkboxes);
+        return new CheckboxesPage(driver);
+    }
+    @FindBy(xpath = "//a[.='File Upload']")
+    WebElement fileUpload;
+    public FileUploadPage getFileUpload() {
+click(fileUpload);
+        return new FileUploadPage(driver);
+    }
+
+    @FindBy(xpath = "//a[.='Dropdown']")
+    WebElement dropdown;
+    public DropdownListPage getDropdownList() {
+        click(dropdown);
+        return new  DropdownListPage(driver);
+    }
 }
