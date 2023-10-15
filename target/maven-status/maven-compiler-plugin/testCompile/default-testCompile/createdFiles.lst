@@ -1,0 +1,10 @@
+org\ait\herokuapp\tests\FramesTests.class
+org\ait\herokuapp\tests\JSExecutorTests.class
+org\ait\herokuapp\tests\HorizontalSliderTest.class
+org\ait\herokuapp\tests\BrokenImagesTest.class
+org\ait\herokuapp\tests\FileUploadTest.class
+org\ait\herokuapp\tests\AlertTests.class
+org\ait\herokuapp\tests\CheckboxesTest.class
+org\ait\herokuapp\tests\DropdownListTest.class
+org\ait\herokuapp\tests\NewTabTest.class
+org\ait\herokuapp\tests\TestBase.class
