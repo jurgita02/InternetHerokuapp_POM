@@ -5,6 +5,7 @@
     <test name="Quick" >
         <classes>
             <class name="org.ait.herokuapp.tests.NewTabTest" />
+            <class name="org.ait.herokuapp.tests.HorizontalSliderTest" />
         </classes>
     </test>
 
